@@ -40,6 +40,7 @@ public class BarcodeScanner extends CordovaPlugin {
     private static final String ENCODE = "encode";
     private static final String CANCELLED = "cancelled";
     private static final String FORMAT = "format";
+    private static final String ACTION = "action";
     private static final String TEXT = "text";
     private static final String DATA = "data";
     private static final String TYPE = "type";

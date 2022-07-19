@@ -40,7 +40,6 @@ public class BarcodeScanner extends CordovaPlugin {
     private static final String ENCODE = "encode";
     private static final String CANCELLED = "cancelled";
     private static final String FORMAT = "format";
-    private static final String ACTION = "action";
     private static final String TEXT = "text";
     private static final String DATA = "data";
     private static final String TYPE = "type";
@@ -223,7 +222,6 @@ public class BarcodeScanner extends CordovaPlugin {
                 try {
                     obj.put(TEXT, intent.getStringExtra("SCAN_RESULT"));
                     obj.put(FORMAT, intent.getStringExtra("SCAN_RESULT_FORMAT"));
-                    obj.put(ACTION, intent.getStringExtra("SCAN_RESULT_UPC_EAN_EXTENSION")); //Result of type
                     obj.put(CANCELLED, false);
                 } catch (JSONException e) {
                     Log.d(LOG_TAG, "This should never happen");
@@ -235,7 +233,6 @@ public class BarcodeScanner extends CordovaPlugin {
                 try {
                     obj.put(TEXT, "");
                     obj.put(FORMAT, "");
-                    obj.put(ACTION, "");
                     obj.put(CANCELLED, true);
                 } catch (JSONException e) {
                     Log.d(LOG_TAG, "This should never happen");
